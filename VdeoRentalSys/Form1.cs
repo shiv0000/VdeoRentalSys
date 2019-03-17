@@ -32,6 +32,7 @@ namespace VdeoRentalSys
                 MainForm obj = new MainForm();
                 obj.Visible = true;
                 timer1.Enabled = false;
+                this.Visible = false;
 
             }
         }

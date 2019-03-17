@@ -647,7 +647,7 @@ namespace VdeoRentalSys
         {
             //find the video which is top most rented
 
-            String query = "select * from Video_Cunt ORDER BY CuntNo DESC";
+            String query = "select * from Video_Cunt ORDER BY CountNo DESC";
             DataTable recrdTbl = data_base.Srch(query);
             MessageBox.Show("Top Most Viewed Movie ID is==" + recrdTbl.Rows[0]["MovieID"]);
 
@@ -659,7 +659,7 @@ namespace VdeoRentalSys
         private void CustomerRatting_Click(object sender, EventArgs e)
         {
             // find the customer who get the video on rent top most
-            String query = "select * from Customer_Cunt ORDER BY CuntNo DESC";
+            String query = "select * from Customer_Cunt ORDER BY CountNo DESC";
             DataTable recrdTbl = data_base.Srch(query);
             MessageBox.Show("Most Video Rented By Customer ID is==" + recrdTbl.Rows[0]["CustomerID"]);
 
@@ -669,6 +669,7 @@ namespace VdeoRentalSys
         {
             //closing the Desktop Application
             Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void rentalDelete_Click(object sender, EventArgs e)
